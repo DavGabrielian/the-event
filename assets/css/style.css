@@ -1147,7 +1147,7 @@ li {
   margin-top: 3rem;
 }
 
-#tickets .tickets-container .card-body {
+#tickets .tickets-container .card .card-body {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1162,9 +1162,346 @@ li {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 30%;
-          flex: 0 0 30%;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
   margin: 1rem;
   padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
+          box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
+}
+
+#tickets .tickets-container .card .card-body h3 {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+#tickets .tickets-container .card .card-body h2 {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  color: #0e1b4d;
+}
+
+#tickets .tickets-container .card .card-body hr {
+  margin: 25px 0;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#tickets .tickets-container .card .card-body ul li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#tickets .tickets-container .card .card-body ul li .fa-check {
+  left: -2.14285714em;
+  width: 2.14285714em;
+  top: 0.14285714em;
+  text-align: center;
+}
+
+#tickets .tickets-container .card .card-body ul .text-muted {
+  opacity: 0.7;
+}
+
+#tickets .tickets-container .card .card-body ul .text-muted .fa-times {
+  left: -2.14285714em;
+  width: 2.14285714em;
+  top: 0.14285714em;
+  text-align: center;
+}
+
+#tickets .tickets-container .card .card-body div {
+  text-align: center;
+}
+
+#tickets .tickets-container .card .card-body div button {
+  font-size: 15px;
+  border-radius: 50px;
+  padding: 10px 40px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: #f82249;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+#contact {
+  padding: 60px 0;
+  background-color: #f6f7fd;
+}
+
+#contact .contact-container {
+  margin-bottom: 3px;
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#contact .contact-container .contact-header {
+  margin-bottom: 60px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+#contact .contact-container .contact-header ::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: #f82249;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+#contact .contact-container .contact-header > h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0e1b4d;
+}
+
+#contact .contact-container .contact-header > p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #9195a2;
+}
+
+#contact .contact-container .contact-info {
+  margin-bottom: 20px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#contact .contact-container .contact-info .contact-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33%;
+          flex: 0 0 33%;
+  max-width: 33%;
+  padding: 20px 0;
+}
+
+#contact .contact-container .contact-info .contact-item h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #112363;
+}
+
+#contact .contact-container .contact-info .contact-item p {
+  margin-bottom: 0;
+  color: #112363;
+}
+
+#contact .contact-container .contact-form {
+  text-align: center;
+}
+
+#contact .contact-container .contact-form .form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+#contact .contact-container .contact-form .form-row div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%;
+}
+
+#contact .contact-container .contact-form .form-row div input {
+  width: 96.5%;
+  padding: 10px 10px;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+#contact .contact-container .contact-form .form-row input {
+  padding: 10px 14px;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 15px;
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+}
+
+#contact .contact-container .contact-form .form-row textarea {
+  padding: 17px 14px;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 15px;
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+}
+
+#contact .contact-container .contact-form button {
+  background: #f82249;
+  border: 0;
+  padding: 10px 40px;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+#links {
+  background: #101522;
+  color: #eee;
+  font-size: 14px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#links div {
+  background: #040919;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#links div .event-block {
+  max-width: 25%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#links div .event-block img {
+  height: 40px;
+}
+
+#links div .event-block p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+}
+
+#links div .links-block {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  max-width: 50%;
+}
+
+#links div .links-block h4 {
+  font-family: "Raleway", sans-serif;
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f82249;
+}
+
+#links div .links-block ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#links div .links-block ul li {
+  border-bottom: 1px solid #262c44;
+  padding: 10px 0;
+}
+
+#links div .links-block ul li .fa-angle-right {
+  padding-right: 5px;
+  color: #f82249;
+  font-size: 18px;
+}
+
+#links div .links-block .social {
+  color: #eee;
+  font-size: 14px;
+}
+
+#links div .links-block .social a {
+  font-size: 18px;
+  display: inline-block;
+  background: #222636;
+  color: #eee;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: auto;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+footer {
+  background: #101522;
+  color: #fff;
+  text-align: center;
+  padding: 3rem;
 }
 /*# sourceMappingURL=style.css.map */
