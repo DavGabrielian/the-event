@@ -7,6 +7,7 @@ body {
   color: #2f3138;
   font-family: "Open Sans", sans-serif;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -72,9 +73,19 @@ li {
       }
     }
   }
+
   #nav-menu {
     float: right;
     margin: 10px;
+
+    .menubtn {
+      display: none;
+    }
+
+    .closebtn {
+      display: none;
+    }
+
     .menu {
       li {
         margin-left: 8px;
@@ -293,9 +304,12 @@ li {
         max-width: 30%;
         padding-right: 10px;
         padding-left: 10px;
-        transition: 5s;
-        transition-duration: 5s;
-        :hover .details {
+
+        .details {
+          transition: 1s;
+          height: 6rem;
+        }
+        &:hover .details {
           height: 8rem;
         }
 
@@ -641,7 +655,10 @@ li {
           font-size: 20px;
           margin-bottom: 5px;
           padding: 0 20px;
-          color: #0e1b4d;
+          a {
+            color: #152b79;
+            text-decoration: none;
+          }
         }
         .stars {
           padding: 0 20px;
@@ -666,6 +683,7 @@ li {
 }
 
 #gallery {
+  overflow-x: hidden;
   padding: 60px 0;
   .gallery-container {
     margin-bottom: 3px;
@@ -702,9 +720,40 @@ li {
       }
     }
 
-    // .gallery-block {
-
-    // }
+    .carusel-block {
+      display: flex;
+      flex-wrap: wrap;
+      overflow: visible;
+      width: 1900px;
+      transform: translate3d(-400px, 0px, 0px);
+      .carusel-item {
+        width: 236.4px;
+        img {
+          display: block;
+          width: 95%;
+        }
+      }
+    }
+    .dots-block {
+      margin-top: 25px;
+      text-align: center;
+      .dot {
+        display: inline-block;
+        margin: 0 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #ddd;
+      }
+      .dot-active {
+        display: inline-block;
+        margin: 0 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #f82249;
+      }
+    }
   }
 }
 
@@ -746,7 +795,6 @@ li {
       border-top: 1px solid #d6eaff;
       border-left: 1px solid #d6eaff;
       margin-bottom: 30px;
-      margin: 0 30px;
     }
 
     .sponsors-item {
@@ -803,6 +851,51 @@ li {
         font-weight: 700;
         margin-bottom: 10px;
         color: #0e1b4d;
+      }
+    }
+    .faq-block {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      .faq-list {
+        width: 70%;
+        li {
+          border-bottom: 1px solid #ddd;
+          a {
+            color: #000;
+            padding: 18px 0;
+            display: block;
+            position: relative;
+            font-family: "Raleway", sans-serif;
+            font-size: 13px;
+            line-height: 24px;
+            font-weight: 600;
+            padding-right: 20px;
+            cursor: pointer;
+            .fa-plus-circle {
+              display: block;
+              font-size: 20px;
+              position: absolute;
+              right: 0;
+              top: 16px;
+            }
+            .fa-minus-circle {
+              display: none;
+              font-size: 20px;
+              position: absolute;
+              right: 0;
+              top: 16px;
+            }
+          }
+          div {
+            display: none;
+            p {
+              margin-bottom: 20px;
+              font-size: 13px;
+            }
+          }
+        }
       }
     }
   }
@@ -1085,16 +1178,38 @@ li {
     }
 
     .contact-form {
+      width: 100%;
+      .first-form-row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-bottom: 1rem;
+
+        div {
+          width: 50%;
+
+          input {
+            width: 95%;
+            border-radius: 0;
+            box-shadow: none;
+            font-size: 15px;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            padding: 10px 5px;
+          }
+        }
+      }
       .form-row {
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 1rem;
         div {
-          flex: 0 0 50%;
-          max-width: 50%;
-
           input {
-            width: 96.5%;
             padding: 10px 10px;
             border-radius: 0;
             box-shadow: none;
@@ -1137,6 +1252,7 @@ li {
           border: 1px solid #ced4da;
         }
       }
+
       text-align: center;
       button {
         background: #f82249;
@@ -1160,11 +1276,10 @@ li {
 
   div {
     background: #040919;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    @include desktopMedia();
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
     .event-block {
       max-width: 25%;
@@ -1239,4 +1354,399 @@ footer {
   color: #fff;
   text-align: center;
   padding: 3rem;
+}
+
+@media all and (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+  .menubtn {
+    display: inline !important;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    margin: 15px 15px 0 0;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none;
+    cursor: pointer;
+    .fa-bars {
+      color: white;
+    }
+    .fa-times {
+      display: block;
+      color: white;
+    }
+  }
+  #nav-menu {
+    .menu {
+      @include flexbox(column);
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 998;
+      overflow-y: auto;
+      width: 0;
+      padding-top: 18px;
+      background: rgba(6, 12, 34, 0.98);
+      transition: 0.4s;
+      .closebtn {
+        display: inline !important;
+        position: relative;
+        left: 15rem;
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        transition: all 0.4s;
+        outline: none;
+        cursor: pointer;
+        .fa-times {
+          display: block;
+          color: white;
+        }
+      }
+      li {
+        a {
+          color: #fff;
+          font-size: 18px;
+          overflow: hidden;
+          padding: 10px 22px 10px 15px;
+          position: relative;
+          text-decoration: none;
+          width: 75%;
+          display: block;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  #intro {
+    .intro-container {
+      h1 {
+        font-size: 34px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  #about {
+    .about-block {
+      padding-right: 20px;
+      padding-left: 20px;
+      .about-container {
+        flex-direction: column;
+        .about-first-item {
+          max-width: 90%;
+        }
+        .about-item {
+          max-width: 90%;
+        }
+      }
+    }
+  }
+
+  #speakers {
+    .speaker-container {
+      .section-block {
+        flex-direction: column;
+        .section-item {
+          max-width: 90%;
+        }
+      }
+    }
+  }
+
+  #schedule {
+    .schedule-container {
+      .days {
+        .day-item {
+          a {
+            padding: 8px 45px;
+          }
+        }
+      }
+      .schedule-block {
+        width: 100%;
+        .schedule-item {
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  #venue {
+    .venue-container {
+      .map-block {
+        flex-direction: column;
+        .map {
+          max-width: 100%;
+        }
+        .venue-info {
+          max-width: 100%;
+          padding-top: 110px;
+          padding-bottom: 110px;
+          > div {
+            > div {
+              flex: 1;
+              max-width: 90%;
+            }
+          }
+        }
+      }
+      .gallery-container {
+        flex-direction: column;
+        .gallery-item {
+          padding-bottom: 10rem;
+          max-width: 100%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  #hotels {
+    .hotels-container {
+      .hotel-block {
+        flex-direction: column;
+        .hotel {
+          padding-bottom: 10rem;
+          max-width: 100%;
+          .hotel-img {
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #gallery {
+    overflow: hidden;
+    padding: 60px 0;
+    .gallery-container {
+      margin-bottom: 3px;
+      @include desktopMedia();
+      .gallery-header {
+        margin-bottom: 60px;
+        position: relative;
+        padding-bottom: 20px;
+        ::before {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 60px;
+          height: 5px;
+          background: #f82249;
+          bottom: 0;
+          left: calc(50% - 25px);
+        }
+        > h2 {
+          font-size: 36px;
+          text-transform: uppercase;
+          text-align: center;
+          font-weight: 700;
+          margin-bottom: 10px;
+          color: #0e1b4d;
+        }
+        > p {
+          text-align: center;
+          padding: 0;
+          margin: 0;
+          font-size: 18px;
+          font-weight: 500;
+          color: #9195a2;
+        }
+      }
+
+      .carusel-block {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: visible;
+        width: 2000px;
+        transform: translate3d(-800px, 0px, 0px);
+        .carusel-item {
+          width: 13%;
+          padding: 2px;
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+      .dots-block {
+        margin-top: 25px;
+        text-align: center;
+        .dot {
+          display: inline-block;
+          margin: 0 5px;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: #ddd;
+        }
+        .dot-active {
+          display: inline-block;
+          margin: 0 5px;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: #f82249;
+        }
+      }
+    }
+  }
+
+  #sponsors {
+    .sponsors-container {
+      .sponsors-block {
+        flex-direction: column;
+        .sponsors-item {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  #faq {
+    .faq-container {
+      .faq-block {
+        .faq-list {
+          width: 90%;
+          li {
+            a {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #subscribe {
+    .subscribe-container {
+      .form-block {
+        div {
+          input {
+            min-width: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  #tickets {
+    .tickets-container {
+      .tickets-header {
+        p {
+          text-align: center;
+          padding: 15px;
+        }
+      }
+      .card {
+        flex-direction: column;
+        .card-body {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  #contact {
+    .contact-container {
+      .contact-info {
+        align-content: center;
+        flex-direction: column;
+        .contact-item {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  #links {
+    > div {
+      flex-direction: column;
+      .event-block {
+        max-width: 95%;
+      }
+      .links-block {
+        max-width: 95%;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {  .menubtn {
+    display: inline !important;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    margin: 15px 15px 0 0;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none;
+    cursor: pointer;
+    .fa-bars {
+      color: white;
+    }
+    .fa-times {
+      display: block;
+      color: white;
+    }
+  }
+  #nav-menu {
+    .menu {
+      @include flexbox(column);
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 998;
+      overflow-y: auto;
+      width: 0;
+      padding-top: 18px;
+      background: rgba(6, 12, 34, 0.98);
+      transition: 0.4s;
+      .closebtn {
+        display: inline !important;
+        position: relative;
+        left: 15rem;
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        transition: all 0.4s;
+        outline: none;
+        cursor: pointer;
+        .fa-times {
+          display: block;
+          color: white;
+        }
+      }
+      li {
+        a {
+          color: #fff;
+          font-size: 18px;
+          overflow: hidden;
+          padding: 10px 22px 10px 15px;
+          position: relative;
+          text-decoration: none;
+          width: 75%;
+          display: block;
+          outline: none;
+        }
+      }
+    }
+  }
 }

@@ -24,9 +24,14 @@
         <div class="logo">
           <a href="#intro"><img src="assets/img/logo.png" alt="intro" /></a>
         </div>
-
         <nav id="nav-menu">
-          <ul class="menu">
+          <button onclick="openMenu()" class="menubtn">
+            <i class="fa fa-bars"></i>
+          </button>
+          <ul id="menu" class="menu">
+            <button onclick="closeMenu()" class="closebtn">
+              <i class="fa fa-times"></i>
+            </button>
             <li><a href="#intro">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#speakers">Speakers</a></li>
@@ -447,18 +452,44 @@
           <h2>Gallery</h2>
           <p>Check our gallery from the recent events</p>
         </div>
+
+        <div class="carusel-block">
+          <div class="carusel-item">
+            <img src="assets/img/gallery/1.jpg" alt="" />
+          </div>
+          <div class="carusel-item">
+            <img src="assets/img/gallery/2.jpg" alt="" />
+          </div>
+          <div class="carusel-item">
+            <img src="assets/img/gallery/3.jpg" alt="" />
+          </div>
+          <div class="carusel-item">
+            <img src="assets/img/gallery/4.jpg" alt="" />
+          </div>
+          <div class="carusel-item">
+            <img src="assets/img/gallery/5.jpg" alt="" />
+          </div>
+          <div class="carusel-item">
+            <img src="assets/img/gallery/6.jpg" alt="" />
+          </div>
+          <div class="carusel-item">
+            <img src="assets/img/gallery/7.jpg" alt="" />
+          </div>
+          <div class="carusel-item">
+            <img src="assets/img/gallery/8.jpg" alt="" />
+          </div>
+        </div>
+        <div class="dots-block">
+          <div class="dot"></div>
+          <div class="dot-active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
       </div>
-      <!-- 
-      <div class="gallery-block">
-        <img src="assets/img/gallery/1.jpg" alt="" />
-        <img src="assets/img/gallery/2.jpg" alt="" />
-        <img src="assets/img/gallery/3.jpg" alt="" />
-        <img src="assets/img/gallery/4.jpg" alt="" />
-        <img src="assets/img/gallery/5.jpg" alt="" />
-        <img src="assets/img/gallery/6.jpg" alt="" />
-        <img src="assets/img/gallery/8.jpg" alt="" />
-        <img src="assets/img/gallery/7.jpg" alt="" />
-      </div> -->
     </section>
 
     <section id="sponsors">
@@ -526,12 +557,13 @@
         </div>
 
         <div class="faq-block">
-          <ul id="faq-list">
+          <ul class="faq-list">
             <li>
-              <a href="#faq1"
+              <a onclick="openFaq()"
                 >Non consectetur a erat nam at lectus urna duis?
-                <i class="fa fa-plus-circle"></i
-              ></a>
+                <i id="plus-icon" class="fa fa-plus-circle"></i>
+                <i id="minus-icon" class="fa fa-minus-circle"></i>
+              </a>
               <div id="faq1">
                 <p>
                   Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
@@ -542,7 +574,7 @@
             </li>
 
             <li>
-              <a href="#faq2"
+              <a
                 >Feugiat scelerisque varius morbi enim nunc faucibus a
                 pellentesque? <i class="fa fa-plus-circle"></i
               ></a>
@@ -755,7 +787,7 @@
         </div>
 
         <form action="" class="contact-form">
-          <div class="form-row">
+          <div class="first-form-row">
             <div>
               <input
                 type="text"
@@ -873,5 +905,7 @@
         by David Gabrielian
       </p>
     </footer>
+
+    <script src="assets/app.js"></script>
   </body>
 </html>
