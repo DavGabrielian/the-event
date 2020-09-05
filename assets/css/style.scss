@@ -69,6 +69,10 @@ li {
           padding: 0;
           margin: 0;
           max-height: 40px;
+          &:hover {
+            transition: .8s;
+            transform: scale(1.1);
+          }
         }
       }
     }
@@ -118,6 +122,9 @@ li {
           margin-top: 2px;
           line-height: 1;
           font-size: 13px;
+          &:hover {
+            background: transparent;
+          }
         }
       }
     }
@@ -170,6 +177,19 @@ li {
       display: block;
       position: relative;
       overflow: hidden;
+      &:hover {
+        transition: 2s;
+        transform: scale(1.3);
+        background: radial-gradient(
+          rgb(240, 234, 234) 50%,
+          rgba(101, 111, 150, 0.15) 52%
+        );
+        .fa-play {
+          transform: scale(1.6);
+          transition: 1s;
+          color: #f82249;
+        }
+      }
       .fa-play {
         position: absolute;
         top: 0;
@@ -193,6 +213,10 @@ li {
       margin: 10px;
       color: #fff;
       border: 2px solid #f82249;
+      &:hover {
+        color: 2px solid #f82249;
+        background-color: #f82249;
+      }
     }
   }
 }
@@ -222,6 +246,7 @@ li {
         max-width: 50%;
 
         h2 {
+          width: 90%;
           font-size: 36px;
           font-weight: bold;
           margin-bottom: 10px;
@@ -308,9 +333,10 @@ li {
         .details {
           transition: 1s;
           height: 6rem;
-        }
-        &:hover .details {
-          height: 8rem;
+
+          &:hover {
+            height: 8rem;
+          }
         }
 
         .speaker {
@@ -590,6 +616,10 @@ li {
         img {
           max-width: 100%;
           height: auto;
+          &:hover {
+            transition: 2s;
+            transform: scale(1.1);
+          }
         }
       }
     }
@@ -648,6 +678,10 @@ li {
           img {
             max-width: 100%;
             height: auto;
+            &:hover {
+              transition: 2s;
+              transform: scale(1.1);
+            }
           }
         }
         h3 {
@@ -802,7 +836,7 @@ li {
       max-width: 25%;
       cursor: pointer;
       &:hover img {
-        max-width: 95%;
+        max-width: 100%;
       }
     }
 
@@ -976,15 +1010,19 @@ li {
           font-size: 14px;
         }
         button {
-          border: 0;
           padding: 9px 25px;
           cursor: pointer;
           background: #f82249;
+          border-color: #f82249;
           color: #fff;
           transition: all 0.3s ease;
           outline: none;
           font-size: 14px;
           border-radius: 50px;
+          &:hover {
+            transition: 0.8s;
+            background: transparent;
+          }
         }
       }
     }
@@ -1104,10 +1142,15 @@ li {
             padding: 10px 40px;
             transition: all 0.2s;
             background-color: #f82249;
-            border: 0;
+            border-color: #f82249;
             color: #fff;
             cursor: pointer;
             outline: none;
+            &:hover {
+              transition: 0.8s;
+              background: transparent;
+              color: #f82249;
+            }
           }
         }
       }
@@ -1256,12 +1299,18 @@ li {
       text-align: center;
       button {
         background: #f82249;
-        border: 0;
+        border-color: #f82249;
         padding: 10px 40px;
         color: #fff;
         transition: 0.4s;
         border-radius: 50px;
         cursor: pointer;
+        outline: none;
+        &:hover {
+          transition: 0.8s;
+          background: transparent;
+          color: #f82249;
+        }
       }
     }
   }
@@ -1343,6 +1392,12 @@ li {
           width: 36px;
           height: auto;
           transition: 0.3s;
+          &:hover {
+            transform: scale(1.5);
+            transition: 0.8s;
+            background: transparent;
+            color: #f82249;
+          }
         }
       }
     }
@@ -1375,11 +1430,12 @@ footer {
     cursor: pointer;
     .fa-bars {
       color: white;
+      &:hover {
+        transition: .8s;
+        transform: scale(1.5);
+      }
     }
-    .fa-times {
-      display: block;
-      color: white;
-    }
+
   }
   #nav-menu {
     .menu {
@@ -1407,6 +1463,10 @@ footer {
         .fa-times {
           display: block;
           color: white;
+          &:hover {
+            transition: .8s;
+            transform: scale(1.5);
+          }
         }
       }
       li {
@@ -1685,7 +1745,8 @@ footer {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {  .menubtn {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menubtn {
     display: inline !important;
     position: fixed;
     right: 0;
@@ -1700,10 +1761,19 @@ footer {
     cursor: pointer;
     .fa-bars {
       color: white;
+      &:hover {
+        transition: .8s;
+        transform: scale(1.5);
+      }
+
     }
     .fa-times {
       display: block;
       color: white;
+      &:hover {
+        transition: .8s;
+        transform: scale(1.5);
+      }
     }
   }
   #nav-menu {
