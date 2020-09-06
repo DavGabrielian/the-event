@@ -51,8 +51,8 @@ li {
 }
 
 #header .header-container .logo a img:hover {
-  -webkit-transition: .8s;
-  transition: .8s;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -1330,7 +1330,7 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #ffffff;
+  background: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-box-flex: 0;
@@ -1747,8 +1747,8 @@ footer {
     color: white;
   }
   .menubtn .fa-bars:hover {
-    -webkit-transition: .8s;
-    transition: .8s;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
   }
@@ -1792,8 +1792,8 @@ footer {
     color: white;
   }
   #nav-menu .menu .closebtn .fa-times:hover {
-    -webkit-transition: .8s;
-    transition: .8s;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
   }
@@ -2052,8 +2052,8 @@ footer {
     color: white;
   }
   .menubtn .fa-bars:hover {
-    -webkit-transition: .8s;
-    transition: .8s;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
   }
@@ -2062,8 +2062,8 @@ footer {
     color: white;
   }
   .menubtn .fa-times:hover {
-    -webkit-transition: .8s;
-    transition: .8s;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
   }

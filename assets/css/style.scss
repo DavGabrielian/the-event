@@ -1,9 +1,11 @@
+@import "./vars";
+
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  background: #fff;
+  background: $main-white;
   color: #2f3138;
   font-family: "Open Sans", sans-serif;
   line-height: 1.5;
@@ -48,7 +50,7 @@ li {
 }
 
 #header {
-  background: rgba(6, 12, 34, 0.98);
+  background: $main-background;
   height: auto;
   padding: 15px 0;
   transition: all 0.5s;
@@ -70,7 +72,7 @@ li {
           margin: 0;
           max-height: 40px;
           &:hover {
-            transition: .8s;
+            transition: 0.8s;
             transform: scale(1.1);
           }
         }
@@ -100,7 +102,7 @@ li {
           text-decoration: none;
           display: inline-block;
           color: rgba(202, 206, 221, 0.8);
-          font-family: "Raleway", sans-serif;
+          font-family: $secondary-font;
           font-weight: 600;
           font-size: 14px;
           outline: none;
@@ -111,11 +113,11 @@ li {
       }
       .buy {
         a {
-          color: #fff;
-          background: #f82249;
+          color: $main-white;
+          background: $button-color;
           padding: 7px 22px;
           border-radius: 50px;
-          border: 2px solid #f82249;
+          border: 2px solid $button-color;
           transition: all ease-in-out 0.3s;
           font-weight: 500;
           margin-left: 8px;
@@ -155,13 +157,13 @@ li {
     background: rgba(6, 12, 34, 0.8);
 
     h1 {
-      color: #fff;
-      font-family: "Raleway", sans-serif;
+      color: $main-white;
+      font-family: $secondary-font;
       font-size: 56px;
       font-weight: 600;
       text-transform: uppercase;
       span {
-        color: #f82249;
+        color: $button-color;
       }
     }
     p {
@@ -172,7 +174,10 @@ li {
     .play-btn {
       width: 94px;
       height: 94px;
-      background: radial-gradient(#f82249 50%, rgba(101, 111, 150, 0.15) 52%);
+      background: radial-gradient(
+        $button-color 50%,
+        rgba(101, 111, 150, 0.15) 52%
+      );
       border-radius: 50%;
       display: block;
       position: relative;
@@ -187,7 +192,7 @@ li {
         .fa-play {
           transform: scale(1.6);
           transition: 1s;
-          color: #f82249;
+          color: $button-color;
         }
       }
       .fa-play {
@@ -201,7 +206,7 @@ li {
       }
     }
     .about-btn {
-      font-family: "Raleway", sans-serif;
+      font-family: $secondary-font;
       font-weight: 500;
       font-size: 14px;
       letter-spacing: 1px;
@@ -211,11 +216,11 @@ li {
       transition: 0.5s;
       line-height: 1;
       margin: 10px;
-      color: #fff;
-      border: 2px solid #f82249;
+      color: $main-white;
+      border: 2px solid $button-color;
       &:hover {
-        color: 2px solid #f82249;
-        background-color: #f82249;
+        color: 2px solid $button-color;
+        background-color: $button-color;
       }
     }
   }
@@ -227,7 +232,7 @@ li {
   background-attachment: fixed;
   overflow: hidden;
   position: relative;
-  color: #fff;
+  color: $main-white;
 
   .about-block {
     padding: 60px 0 40px 0;
@@ -250,13 +255,13 @@ li {
           font-size: 36px;
           font-weight: bold;
           margin-bottom: 10px;
-          color: #fff;
+          color: $main-white;
         }
         p {
           width: 90%;
           font-size: 14px;
           margin-bottom: 20px;
-          color: #fff;
+          color: $main-white;
         }
       }
       .about-item {
@@ -268,13 +273,13 @@ li {
           font-weight: bold;
           text-transform: uppercase;
           margin-bottom: 10px;
-          color: #fff;
+          color: $main-white;
         }
         p {
           width: 90%;
           font-size: 14px;
           margin-bottom: 20px;
-          color: #fff;
+          color: $main-white;
         }
       }
     }
@@ -296,7 +301,7 @@ li {
         display: block;
         width: 60px;
         height: 5px;
-        background: #f82249;
+        background: $button-color;
         bottom: 0;
         left: calc(50% - 25px);
       }
@@ -305,10 +310,10 @@ li {
         text-transform: uppercase;
         text-align: center;
         font-weight: 700;
-        font-family: "Raleway", sans-serif;
+        font-family: $secondary-font;
         margin: 0 0 20px 0;
         padding: 0;
-        color: #0e1b4d;
+        color: $primary-color;
       }
       > p {
         text-align: center;
@@ -316,7 +321,7 @@ li {
         margin: 0;
         font-size: 18px;
         font-weight: 500;
-        color: #9195a2;
+        color: $main-grey;
       }
     }
     .section-block {
@@ -358,14 +363,14 @@ li {
             cursor: pointer;
 
             h3 {
-              color: #fff;
+              color: $main-white;
               font-size: 20px;
               font-weight: 600;
               margin-bottom: 5px;
-              font-family: "Raleway", sans-serif;
+              font-family: $secondary-font;
             }
             p {
-              color: #fff;
+              color: $main-white;
               font-size: 15px;
               margin-bottom: 10px;
               font-style: italic;
@@ -373,7 +378,7 @@ li {
             .social {
               height: 30px;
               a {
-                color: #fff;
+                color: $main-white;
               }
             }
           }
@@ -385,7 +390,7 @@ li {
 
 #schedule {
   padding: 60px 0 30px 0;
-  background-color: #f6f7fd;
+  background-color: $second-white;
   .schedule-container {
     @include desktopMedia();
 
@@ -399,7 +404,7 @@ li {
         display: block;
         width: 60px;
         height: 5px;
-        background: #f82249;
+        background: $button-color;
         bottom: 0;
         left: calc(50% - 25px);
       }
@@ -409,7 +414,7 @@ li {
         text-align: center;
         font-weight: 700;
         margin-bottom: 10px;
-        color: #0e1b4d;
+        color: $primary-color;
       }
       > p {
         text-align: center;
@@ -417,7 +422,7 @@ li {
         margin: 0;
         font-size: 18px;
         font-weight: 500;
-        color: #9195a2;
+        color: $main-grey;
       }
     }
     .days {
@@ -427,8 +432,8 @@ li {
       margin-bottom: 30px;
 
       .day-item:first-child a {
-        background-color: #f82249;
-        color: #fff;
+        background-color: $button-color;
+        color: $main-white;
       }
 
       .day-item {
@@ -438,8 +443,8 @@ li {
           border: none;
           border-radius: 50px;
           font-weight: 600;
-          background-color: #0e1b4d;
-          color: #fff;
+          background-color: $primary-color;
+          color: $main-white;
           padding: 10px 100px;
         }
       }
@@ -451,7 +456,7 @@ li {
       font-size: 18px;
       font-style: italic;
       margin: 0 auto 30px auto;
-      color: #0e1b4d;
+      color: $primary-color;
     }
 
     .schedule-block {
@@ -479,7 +484,7 @@ li {
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 5px;
-            color: #0e1b4d;
+            color: $primary-color;
             span {
               font-style: italic;
               color: #19328e;
@@ -527,7 +532,7 @@ li {
         display: block;
         width: 60px;
         height: 5px;
-        background: #f82249;
+        background: $button-color;
         bottom: 0;
         left: calc(50% - 25px);
       }
@@ -537,7 +542,7 @@ li {
         text-align: center;
         font-weight: 700;
         margin-bottom: 10px;
-        color: #0e1b4d;
+        color: $primary-color;
       }
       > p {
         text-align: center;
@@ -545,7 +550,7 @@ li {
         margin: 0;
         font-size: 18px;
         font-weight: 500;
-        color: #9195a2;
+        color: $main-grey;
       }
     }
 
@@ -592,12 +597,12 @@ li {
             h3 {
               font-size: 36px;
               font-weight: 700;
-              color: #fff;
+              color: $main-white;
               margin: 0 0 20px 0;
             }
 
             p {
-              color: #fff;
+              color: $main-white;
               margin-bottom: 0;
             }
           }
@@ -641,7 +646,7 @@ li {
         display: block;
         width: 60px;
         height: 5px;
-        background: #f82249;
+        background: $button-color;
         bottom: 0;
         left: calc(50% - 25px);
       }
@@ -651,7 +656,7 @@ li {
         text-align: center;
         font-weight: 700;
         margin-bottom: 10px;
-        color: #0e1b4d;
+        color: $primary-color;
       }
       > p {
         text-align: center;
@@ -659,7 +664,7 @@ li {
         margin: 0;
         font-size: 18px;
         font-weight: 500;
-        color: #9195a2;
+        color: $main-grey;
       }
     }
 
@@ -671,7 +676,7 @@ li {
         flex: 0 0 33%;
         max-width: 33%;
         border: 1px solid #e0e5fa;
-        background: #fff;
+        background: $main-white;
         margin-bottom: 30px;
         .hotel-img {
           margin-bottom: 15px;
@@ -732,7 +737,7 @@ li {
         display: block;
         width: 60px;
         height: 5px;
-        background: #f82249;
+        background: $button-color;
         bottom: 0;
         left: calc(50% - 25px);
       }
@@ -742,7 +747,7 @@ li {
         text-align: center;
         font-weight: 700;
         margin-bottom: 10px;
-        color: #0e1b4d;
+        color: $primary-color;
       }
       > p {
         text-align: center;
@@ -750,7 +755,7 @@ li {
         margin: 0;
         font-size: 18px;
         font-weight: 500;
-        color: #9195a2;
+        color: $main-grey;
       }
     }
 
@@ -785,7 +790,7 @@ li {
         width: 12px;
         height: 12px;
         border-radius: 50%;
-        background-color: #f82249;
+        background-color: $button-color;
       }
     }
   }
@@ -793,7 +798,7 @@ li {
 
 #sponsors {
   padding: 60px 0;
-  background-color: #f6f7fd;
+  background-color: $second-white;
   .sponsors-container {
     margin-bottom: 3px;
     @include desktopMedia();
@@ -807,7 +812,7 @@ li {
         display: block;
         width: 60px;
         height: 5px;
-        background: #f82249;
+        background: $button-color;
         bottom: 0;
         left: calc(50% - 25px);
       }
@@ -817,7 +822,7 @@ li {
         text-align: center;
         font-weight: 700;
         margin-bottom: 10px;
-        color: #0e1b4d;
+        color: $primary-color;
       }
     }
 
@@ -847,7 +852,7 @@ li {
       border-right: 1px solid #d6eaff;
       border-bottom: 1px solid #d6eaff;
       overflow: hidden;
-      background: #fff;
+      background: $main-white;
       height: 160px;
 
       > img {
@@ -874,7 +879,7 @@ li {
         display: block;
         width: 60px;
         height: 5px;
-        background: #f82249;
+        background: $button-color;
         bottom: 0;
         left: calc(50% - 25px);
       }
@@ -884,7 +889,7 @@ li {
         text-align: center;
         font-weight: 700;
         margin-bottom: 10px;
-        color: #0e1b4d;
+        color: $primary-color;
       }
     }
     .faq-block {
@@ -901,7 +906,7 @@ li {
             padding: 18px 0;
             display: block;
             position: relative;
-            font-family: "Raleway", sans-serif;
+            font-family: $secondary-font;
             font-size: 13px;
             line-height: 24px;
             font-weight: 600;
@@ -965,7 +970,7 @@ li {
         display: block;
         width: 60px;
         height: 5px;
-        background: #f82249;
+        background: $button-color;
         bottom: 0;
         left: calc(50% - 25px);
       }
@@ -975,7 +980,7 @@ li {
         text-align: center;
         font-weight: 700;
         margin-bottom: 10px;
-        color: #fff;
+        color: $main-white;
       }
       > p {
         text-align: center;
@@ -983,7 +988,7 @@ li {
         margin: 0;
         font-size: 18px;
         font-weight: 500;
-        color: #fff;
+        color: $main-white;
       }
     }
 
@@ -1000,7 +1005,7 @@ li {
         padding-left: 5px;
         input {
           min-width: 400px;
-          background: #fff;
+          background: $main-white;
           color: #060c22;
           border: 0;
           outline: none;
@@ -1012,9 +1017,9 @@ li {
         button {
           padding: 9px 25px;
           cursor: pointer;
-          background: #f82249;
-          border-color: #f82249;
-          color: #fff;
+          background: $button-color;
+          border-color: $button-color;
+          color: $main-white;
           transition: all 0.3s ease;
           outline: none;
           font-size: 14px;
@@ -1031,7 +1036,7 @@ li {
 
 #tickets {
   padding: 60px 0;
-  background-color: #f6f7fd;
+  background-color: $second-white;
   .tickets-container {
     margin-bottom: 3px;
     @include desktopMedia();
@@ -1045,7 +1050,7 @@ li {
         display: block;
         width: 60px;
         height: 5px;
-        background: #f82249;
+        background: $button-color;
         bottom: 0;
         left: calc(50% - 25px);
       }
@@ -1055,7 +1060,7 @@ li {
         text-align: center;
         font-weight: 700;
         margin-bottom: 10px;
-        color: #0e1b4d;
+        color: $primary-color;
       }
       > p {
         text-align: center;
@@ -1063,7 +1068,7 @@ li {
         margin: 0;
         font-size: 18px;
         font-weight: 500;
-        color: #9195a2;
+        color: $main-grey;
       }
     }
 
@@ -1080,7 +1085,7 @@ li {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        background: #ffffff;
+        background: $main-white;
         box-sizing: border-box;
         flex: 0 0 25%;
         margin: 1rem;
@@ -1099,13 +1104,13 @@ li {
           opacity: 0.7;
         }
         h2 {
-          font-family: "Raleway", sans-serif;
+          font-family: $secondary-font;
           text-align: center;
           font-size: 48px;
           font-weight: 400;
           margin: 0;
           padding: 0;
-          color: #0e1b4d;
+          color: $primary-color;
         }
         hr {
           margin: 25px 0;
@@ -1141,15 +1146,15 @@ li {
             border-radius: 50px;
             padding: 10px 40px;
             transition: all 0.2s;
-            background-color: #f82249;
-            border-color: #f82249;
-            color: #fff;
+            background-color: $button-color;
+            border-color: $button-color;
+            color: $main-white;
             cursor: pointer;
             outline: none;
             &:hover {
               transition: 0.8s;
               background: transparent;
-              color: #f82249;
+              color: $button-color;
             }
           }
         }
@@ -1160,7 +1165,7 @@ li {
 
 #contact {
   padding: 60px 0;
-  background-color: #f6f7fd;
+  background-color: $second-white;
   .contact-container {
     margin-bottom: 3px;
     @include desktopMedia();
@@ -1174,7 +1179,7 @@ li {
         display: block;
         width: 60px;
         height: 5px;
-        background: #f82249;
+        background: $button-color;
         bottom: 0;
         left: calc(50% - 25px);
       }
@@ -1184,7 +1189,7 @@ li {
         text-align: center;
         font-weight: 700;
         margin-bottom: 10px;
-        color: #0e1b4d;
+        color: $primary-color;
       }
       > p {
         text-align: center;
@@ -1192,7 +1197,7 @@ li {
         margin: 0;
         font-size: 18px;
         font-weight: 500;
-        color: #9195a2;
+        color: $main-grey;
       }
     }
 
@@ -1206,7 +1211,7 @@ li {
         max-width: 33%;
         padding: 20px 0;
         h3 {
-          font-family: "Raleway", sans-serif;
+          font-family: $secondary-font;
           font-size: 18px;
           margin-bottom: 15px;
           font-weight: bold;
@@ -1238,8 +1243,8 @@ li {
             font-size: 15px;
             font-size: 1rem;
             line-height: 1.5;
-            color: #495057;
-            background-color: #fff;
+            color: $second-grey;
+            background-color: $main-white;
             background-clip: padding-box;
             border: 1px solid #ced4da;
             border-radius: 0.25rem;
@@ -1259,8 +1264,8 @@ li {
             font-size: 15px;
             font-size: 1rem;
             line-height: 1.5;
-            color: #495057;
-            background-color: #fff;
+            color: $second-grey;
+            background-color: $main-white;
             background-clip: padding-box;
             border: 1px solid #ced4da;
             border-radius: 0.25rem;
@@ -1275,8 +1280,8 @@ li {
           display: block;
           width: 100%;
           line-height: 1.5;
-          color: #495057;
-          background-color: #fff;
+          color: $second-grey;
+          background-color: $main-white;
           background-clip: padding-box;
           border: 1px solid #ced4da;
         }
@@ -1289,8 +1294,8 @@ li {
           display: block;
           width: 100%;
           line-height: 1.5;
-          color: #495057;
-          background-color: #fff;
+          color: $second-grey;
+          background-color: $main-white;
           background-clip: padding-box;
           border: 1px solid #ced4da;
         }
@@ -1298,10 +1303,10 @@ li {
 
       text-align: center;
       button {
-        background: #f82249;
-        border-color: #f82249;
+        background: $button-color;
+        border-color: $button-color;
         padding: 10px 40px;
-        color: #fff;
+        color: $main-white;
         transition: 0.4s;
         border-radius: 50px;
         cursor: pointer;
@@ -1309,7 +1314,7 @@ li {
         &:hover {
           transition: 0.8s;
           background: transparent;
-          color: #f82249;
+          color: $button-color;
         }
       }
     }
@@ -1341,8 +1346,8 @@ li {
         font-size: 14px;
         line-height: 24px;
         margin-bottom: 0;
-        font-family: "Raleway", sans-serif;
-        color: #fff;
+        font-family: $secondary-font;
+        color: $main-white;
       }
     }
 
@@ -1350,15 +1355,15 @@ li {
       flex: 0 0 20%;
       max-width: 50%;
       h4 {
-        font-family: "Raleway", sans-serif;
+        font-family: $secondary-font;
         margin: 0 0 20px 0;
         font-size: 14px;
         font-weight: bold;
-        color: #fff;
+        color: $main-white;
         text-transform: uppercase;
         position: relative;
         padding-bottom: 12px;
-        border-bottom: 2px solid #f82249;
+        border-bottom: 2px solid $button-color;
       }
 
       ul {
@@ -1370,7 +1375,7 @@ li {
           padding: 10px 0;
           .fa-angle-right {
             padding-right: 5px;
-            color: #f82249;
+            color: $button-color;
             font-size: 18px;
           }
         }
@@ -1396,7 +1401,7 @@ li {
             transform: scale(1.5);
             transition: 0.8s;
             background: transparent;
-            color: #f82249;
+            color: $button-color;
           }
         }
       }
@@ -1406,7 +1411,7 @@ li {
 
 footer {
   background: #101522;
-  color: #fff;
+  color: $main-white;
   text-align: center;
   padding: 3rem;
 }
@@ -1431,11 +1436,10 @@ footer {
     .fa-bars {
       color: white;
       &:hover {
-        transition: .8s;
+        transition: 0.8s;
         transform: scale(1.5);
       }
     }
-
   }
   #nav-menu {
     .menu {
@@ -1448,7 +1452,7 @@ footer {
       overflow-y: auto;
       width: 0;
       padding-top: 18px;
-      background: rgba(6, 12, 34, 0.98);
+      background: $main-background;
       transition: 0.4s;
       .closebtn {
         display: inline !important;
@@ -1464,14 +1468,14 @@ footer {
           display: block;
           color: white;
           &:hover {
-            transition: .8s;
+            transition: 0.8s;
             transform: scale(1.5);
           }
         }
       }
       li {
         a {
-          color: #fff;
+          color: $main-white;
           font-size: 18px;
           overflow: hidden;
           padding: 10px 22px 10px 15px;
@@ -1606,7 +1610,7 @@ footer {
           display: block;
           width: 60px;
           height: 5px;
-          background: #f82249;
+          background: $button-color;
           bottom: 0;
           left: calc(50% - 25px);
         }
@@ -1616,7 +1620,7 @@ footer {
           text-align: center;
           font-weight: 700;
           margin-bottom: 10px;
-          color: #0e1b4d;
+          color: $primary-color;
         }
         > p {
           text-align: center;
@@ -1624,7 +1628,7 @@ footer {
           margin: 0;
           font-size: 18px;
           font-weight: 500;
-          color: #9195a2;
+          color: $main-grey;
         }
       }
 
@@ -1660,7 +1664,7 @@ footer {
           width: 12px;
           height: 12px;
           border-radius: 50%;
-          background-color: #f82249;
+          background-color: $button-color;
         }
       }
     }
@@ -1762,16 +1766,15 @@ footer {
     .fa-bars {
       color: white;
       &:hover {
-        transition: .8s;
+        transition: 0.8s;
         transform: scale(1.5);
       }
-
     }
     .fa-times {
       display: block;
       color: white;
       &:hover {
-        transition: .8s;
+        transition: 0.8s;
         transform: scale(1.5);
       }
     }
@@ -1787,7 +1790,7 @@ footer {
       overflow-y: auto;
       width: 0;
       padding-top: 18px;
-      background: rgba(6, 12, 34, 0.98);
+      background: $main-background;
       transition: 0.4s;
       .closebtn {
         display: inline !important;
@@ -1806,7 +1809,7 @@ footer {
       }
       li {
         a {
-          color: #fff;
+          color: $main-white;
           font-size: 18px;
           overflow: hidden;
           padding: 10px 22px 10px 15px;
